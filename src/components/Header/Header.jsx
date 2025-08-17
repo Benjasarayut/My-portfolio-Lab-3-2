@@ -30,7 +30,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>Your Name</h2>
+            <h2>Mr.Benjasarayut</h2>
           </div>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

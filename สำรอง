@@ -1,0 +1,46 @@
+// src/components/Projects/Projects.jsx
+import './Projects.css';
+import ProjectCard from './ProjectCard'; // component card แยก
+import image_1 from '../../assets/images/Screenshot 2025-08-17 191412.png';
+import image_2 from '../../assets/images/Screenshot 2025-08-17 192228.png'; // ตรวจสอบ path ให้ถูกต้อง
+
+const projects = [
+  {
+    title: 'My Web Profile',
+    description: 'A personal web profile project',
+    image: image_1,
+    technologies: ['React', 'Vite', 'CSS'],
+    demoUrl: 'https://benjasarayut.github.io/portfolio-website/',
+    githubUrl: 'https://github.com/Benjasarayut/portfolio-website',
+  },
+  {
+    title: 'Weather App',
+    description: 'A personal web profile project',
+    image: image_2,
+    technologies: ['React', 'Vite', 'CSS'],
+    demoUrl: 'https://benjasarayut.github.io/my-weather-app/',
+    githubUrl: 'https://github.com/Benjasarayut/my-weather-app/',
+  },
+  // สามารถเพิ่ม project อื่น ๆ ที่นี่
+];
+
+function Projects() {
+  return (
+    <section id="projects" className="projects section">
+      <div className="container">
+        <h2 className="section-title">My Projects</h2>
+        <p className="section-subtitle">
+          Here are some of the projects I've worked on recently.
+        </p>
+
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Projects;

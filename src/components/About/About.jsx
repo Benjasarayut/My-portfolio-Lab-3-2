@@ -1,6 +1,7 @@
 // src/components/About/About.jsx
 import { Code, Palette, Zap, Heart } from 'lucide-react';
 import './About.css';
+import profile from "../../assets/images/6fcbfa82dab16e505010228c7c948c37.jpg"
 
 function About() {
   const skills = [
@@ -57,6 +58,7 @@ function About() {
           <div className="about-image">
             <div className="image-placeholder">
               <div className="placeholder-content">
+                <img src={profile} alt="" style={{marginTop : "65px"}}/>
                 <p>Your Photo Here</p>
                 <small>Add your profile picture</small>
               </div>
